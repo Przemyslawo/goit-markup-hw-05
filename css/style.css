@@ -309,6 +309,9 @@ body {
 }
 
 /*Our Team--------------------*/
+.team-background {
+  background-color: var(--gray3);
+}
 .h2 {
   text-align: center;
   margin: 0px 0 50px 0;
