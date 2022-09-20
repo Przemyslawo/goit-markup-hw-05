@@ -221,6 +221,27 @@ body {
   border-style: none;
   cursor: pointer;
 }
+.modal {
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  max-width: 528px;
+  max-height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  display: flex;
+  justify-content: flex-end;
+}
+.backdrop is-hidde {
+}
 /*strengths--------------------------*/
 
 .strengths {
@@ -454,28 +475,36 @@ li:hover .overlay {
   position: relative;
   overflow: hidden;
 }
-.item-des {
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  cursor: pointer;
+  margin: 8px 8px 0 0;
+}
+.backdrop {
+  position: fixed;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 24px 20px;
-  position: relative;
-  z-index: 3;
-  background-color: white;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000033;
+  align-items: center;
+  justify-content: center;
+  transition-property: opacity, visibility;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  opacity: 1;
+  visibility: visible;
 }
-.item-des h3 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 200%;
-  letter-spacing: 0.06em;
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: 250ms ease-in-out;
 }
-.item-des p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 188%;
-  letter-spacing: 0.03em;
-}
-
 /*Our Client----------------------------------------*/
 
 .our-clients {
